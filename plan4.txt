@@ -1,0 +1,24 @@
+Requirements Specification
+    The program will run a simulation 100,000 times just to make a complete laughing stock of that armchair statistican.
+    A sample will be collected from each simulation and added to a test pool of data that statistical analysis will be performed
+    against. After the tests are completed the results are logged to the console. If the user can't believe their own eyes they are
+    welcome to queue up another round of tests with a simple "yes", once they're are satisfied with procedural annihilation of this
+    pitiful zookeepers hopes and dreams they are welcome to opt out of additional testing by being assertive and saying "no".
+
+System Analysis
+
+    The system's activities primarily occur within a top-level while loop and it's child while loop. The iterations of
+    the top-level while loop represent
+    the variables elephantAPen, elephantBPen and penChecked all store a pseudo randomly generated integer from a range
+    of one to six.
+
+
+
+System Design
+
+
+Implementation
+
+
+Testing
+    n/a

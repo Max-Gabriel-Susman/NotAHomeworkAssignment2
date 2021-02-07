@@ -1,0 +1,31 @@
+Requirements Specification
+
+
+System Analysis
+
+
+System Design
+
+
+Implementation
+
+
+Testing
+
+
+A Fluky Number is a number that is equal to the sum of a set of random numbers, where the random numbers are the
+first random numbers generated after seeding a random number generator with each factor of the number, not including
+itself. That's quite a mouthful, so here it is again in simpler terms. All of the following requirements must be met
+for a number to be a Fluky Number.
+
+A Fluky Number is a number, called The Number,  that is equal to the sum of a set of randomly generated numbers.
+
+Random numbers are generated with a random number function. We will use randint() from the random module.
+
+The randomly generated numbers are in the range of 1 to the The Number, inclusive. (Ex. If The Number is 10, the
+random number can be 1 through 10, including 1 and 10)
+
+Random numbers are the first number generated after setting a specific seed value (Use the random.seed() function).
+
+The seed values are all of the factors of The Number, not including itself. (Ex. The factors of the number 10 that
+will be used for the seed are 1, 2, and 5)
