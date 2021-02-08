@@ -3,9 +3,15 @@
 # Assignment 3
 
 import math
+import random
 
 # stores boolean that is used to terminate runtime loop
 simulationQueued = True
+
+testPoolSize = 100000
+
+# poorly written comedic relief
+print("Welcome to Elephant Simulator 5000")
 
 # runtime loop
 while simulationQueued:
@@ -19,11 +25,11 @@ while simulationQueued:
     twoElephantsFoundCounter = 0
 
     # test pool loop
-    while sampleCounter < 100000:
+    while sampleCounter < testPoolSize:
         # pseudo random numbers will detemine what pen each elephant is sleeping in
-        elephantAPen = math.randint(1, 7)
-        elephantBPen = math.randint(1, 7)
-        penChecked = math.randint(1, 7)
+        elephantAPen = random.randint(1, 6)
+        elephantBPen = random.randint(1, 6)
+        penChecked = random.randint(1, 6)
 
         # logic used to determine instance's result
         if elephantAPen == elephantBPen and elephantBPen == penChecked:
@@ -33,13 +39,23 @@ while simulationQueued:
         else:
             noElephantsFoundCounter += 1
 
+        print(str(sampleCounter + 1) + "th sample collected")
+        sampleCounter += 1
 
+    # these variables store the statistics derived from the testing pool
+    percentSingleElephantFound = oneElephantFoundCounter / testPoolSize
+    percentTwoElephantsFound = twoElephantsFoundCounter / testPoolSize
+
+    # this is just for debug, remove for submission
+    print(oneElephantFoundCounter)
+    print(twoElephantsFoundCounter)
 
     # we need to report the following statistics
     # what percentage of time is their at least one elephant in the pen the zookeeper checks?
     # what percentage of time is their two elephants in the pen that the zookeeper checks
-    print("The percentage of time there was at least one elephant in the pen checked by the zookeeper was ")
-
+    print("The percentage of time there was at least one elephant in the pen checked by the zookeeper was " + str(oneElephantFoundCounter) + "%.")
+    print("The percentage of time there was at least one elephant in the pen checked by the zookeeper was " + str(twoElephantsFoundCounter) + "%.")
+    print("The zookeeper was incorrect")
     # boolean used to terminate encore loop
     waitingOnInput = True
 
